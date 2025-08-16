@@ -707,17 +707,19 @@ h1, h2, h3, h4, h5, h6 {
     /* Mobile Navigation Logo Adjustments - Always Visible */
     .nav-logo {
         min-width: 200px;
-        max-width: 280px;
+        max-width: 320px;
         margin-left: 0;
         flex-shrink: 0;
         position: relative;
         z-index: 1001;
+        flex: 1;
     }
     
     .nav-logo img {
         height: 60px !important;
         max-width: 100%;
         object-fit: contain;
+        flex-shrink: 0;
     }
     
     .nav-logo span {
@@ -725,6 +727,8 @@ h1, h2, h3, h4, h5, h6 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        flex: 1;
+        min-width: 0;
     }
     
     .logo-link {
@@ -735,6 +739,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         min-width: 0;
+        width: 100%;
     }
     
     .logo-link img {
@@ -896,25 +901,29 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     /* Extra Small Mobile Devices - Logo Always Visible */
     .nav-logo {
-        min-width: 180px;
-        max-width: 240px;
+        min-width: 160px;
+        max-width: 280px;
         margin-left: 0;
         flex-shrink: 0;
         position: relative;
         z-index: 1001;
+        flex: 1;
     }
     
     .nav-logo img {
         height: 50px !important;
         max-width: 100%;
         object-fit: contain;
+        flex-shrink: 0;
     }
     
     .nav-logo span {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        flex: 1;
+        min-width: 0;
     }
     
     .logo-link {
@@ -925,6 +934,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         min-width: 0;
+        width: 100%;
     }
     
     .nav-container {
@@ -1034,12 +1044,17 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0.5rem 0;
     }
     
+    .nav-logo {
+        min-width: 140px;
+        max-width: 200px;
+    }
+    
     .nav-logo img {
         height: 50px !important;
     }
     
     .nav-logo span {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     
     .hero {
@@ -1166,6 +1181,110 @@ h1, h2, h3, h4, h5, h6 {
     
     .container {
         max-width: 1400px;
+    }
+}
+
+/* Device-Specific Text Scaling to Prevent Cutoff */
+@media (max-width: 400px) {
+    .nav-logo span {
+        font-size: 0.75rem;
+    }
+    
+    .nav-logo {
+        min-width: 140px;
+        max-width: 200px;
+    }
+    
+    .code-block {
+        font-size: 0.7rem;
+        max-width: 220px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+    .nav-logo span {
+        font-size: 0.8rem;
+    }
+    
+    .nav-logo {
+        min-width: 160px;
+        max-width: 240px;
+    }
+    
+    .code-block {
+        font-size: 0.75rem;
+        max-width: 240px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+    .nav-logo span {
+        font-size: 0.85rem;
+    }
+    
+    .nav-logo {
+        min-width: 180px;
+        max-width: 260px;
+    }
+    
+    .code-block {
+        font-size: 0.8rem;
+        max-width: 260px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+    .nav-logo span {
+        font-size: 0.9rem;
+    }
+    
+    .nav-logo {
+        min-width: 200px;
+        max-width: 280px;
+    }
+    
+    .code-block {
+        font-size: 0.85rem;
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 800px) {
+    .nav-logo span {
+        font-size: 0.95rem;
+    }
+    
+    .nav-logo {
+        min-width: 220px;
+        max-width: 300px;
+    }
+    
+    .code-block {
+        font-size: 0.9rem;
+        max-width: 300px;
+    }
+}
+
+/* Height-based adjustments for very short screens */
+@media (max-height: 500px) {
+    .nav-logo span {
+        font-size: 0.75rem;
+    }
+    
+    .code-block {
+        font-size: 0.7rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (min-height: 501px) and (max-height: 600px) {
+    .nav-logo span {
+        font-size: 0.8rem;
+    }
+    
+    .code-block {
+        font-size: 0.75rem;
+        padding: 1rem;
     }
 }
 
