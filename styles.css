@@ -696,26 +696,51 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Mobile Navigation Logo Adjustments */
     .nav-logo {
-        min-width: 250px;
-        margin-left: -30px;
+        min-width: 280px;
+        margin-left: -15px;
+        flex-shrink: 0;
     }
     
     .nav-logo img {
-        height: 60px !important;
+        height: 70px !important;
     }
     
     .nav-logo span {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        white-space: nowrap;
     }
     
     .logo-link {
-        padding: 0.4rem 0.8rem;
-        margin-left: -20px;
+        padding: 0.5rem 1rem;
+        margin-left: -10px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
     
     .logo-link img {
-        margin-right: 10px;
-        margin-left: -20px;
+        margin-right: 12px;
+        margin-left: -15px;
+    }
+    
+    /* Mobile Navigation Container */
+    .nav-container {
+        padding: 0 15px 0 10px;
+        justify-content: space-between;
+    }
+    
+    /* Mobile Navigation Menu */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: var(--black);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        z-index: 999;
     }
     
     /* Mobile Hero Section */
@@ -860,21 +885,29 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     /* Extra Small Mobile Devices */
     .nav-logo {
-        min-width: 200px;
-        margin-left: -20px;
+        min-width: 240px;
+        margin-left: -10px;
+        flex-shrink: 0;
     }
     
     .nav-logo img {
-        height: 50px !important;
+        height: 60px !important;
     }
     
     .nav-logo span {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        white-space: nowrap;
     }
     
     .logo-link {
-        padding: 0.3rem 0.6rem;
-        margin-left: -15px;
+        padding: 0.4rem 0.8rem;
+        margin-left: -5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+    }
+    
+    .nav-container {
+        padding: 0 10px 0 5px;
     }
     
     .hero-title {
@@ -1022,6 +1055,21 @@ html {
     .hamburger span {
         width: 20px;
         height: 2px;
+    }
+    
+    /* Ensure logo visibility on mobile */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+    
+    .nav-logo {
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .logo-link:hover {
+        background: rgba(231, 76, 60, 0.2);
+        transform: scale(1.02);
     }
 }
 
