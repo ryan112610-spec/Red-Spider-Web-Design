@@ -709,7 +709,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav-logo {
         min-width: 80px;
         max-width: 120px;
-        margin: 0 auto;
+        margin-left: 0;
         flex-shrink: 0;
         position: relative;
         z-index: 1001;
@@ -747,7 +747,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Mobile Navigation Container */
     .nav-container {
         padding: 0 10px;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 0;
     }
@@ -899,7 +899,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav-logo {
         min-width: 70px;
         max-width: 100px;
-        margin: 0 auto;
+        margin-left: 0;
         flex-shrink: 0;
         position: relative;
         z-index: 1001;
@@ -931,7 +931,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-container {
         padding: 0 8px;
-        justify-content: center;
+        justify-content: space-between;
         gap: 0;
     }
     
